@@ -1,64 +1,46 @@
-from django.shortcuts import render
-from django.views.generic import View
-from django.shortcuts import render
-# Create your views here.
+from django.views.generic import TemplateView
 
+class IndexView(TemplateView):
+    template_name = "index.html"
 
-def IndexView(request):
-    return render(request, 'index.html')
+class ResgitrarView(TemplateView):
+    template_name = "register.html"
 
+class HeadersView(TemplateView):
+    template_name = "headers.html"
 
-def ResgitrarView(request):
-    return render(request, 'register.html')
+class AboutUsView(TemplateView):
+    template_name = "about-us.html"
 
+class BlogView(TemplateView):
+    template_name = "blog.html"
 
-def HeadersView(request):
-    return render(request, 'headers.html')
+class BlogPostView(TemplateView):
+    template_name = "blog-post.html"
 
+class ContacUsview(TemplateView):
+    template_name = "contact-us.html"
 
-def AboutUsView(request):
-    return render(request, 'about-us.html')
+class Landingview(TemplateView):
+    template_name = "landing-page.html"
 
+class LoginView(TemplateView):
+    template_name = "login.html"
 
-def BlogView(request):
-    return render(request, 'blog.html')
+class PricingView(TemplateView):
+    template_name = "pricing.html"
 
+class ShoppingCartView(TemplateView):
+    template_name = "hopping-cart.html"
 
-def BlogPostView(request):
-    return render(request, 'blog-post.html')
+class EcommerceView(TemplateView):
+    template_name = "ecommerce.html"
 
+class ProductPageView(TemplateView):
+    template_name = "product-page.html"
 
-def ContacUsview(request):
-    return render(request, 'contact-us.html')
+class ProfilePageView(TemplateView):
+    template_name = "profile-page.html"
 
-
-def Landingview(request):
-    return render(request, 'landing-page.html')
-
-
-def LoginView(request):
-    return render(request, 'login.html')
-
-
-def PricingView(request):
-    return render(request, 'pricing.html')
-
-
-def ShoppingCartView(request):
-    return render(request, 'shopping-cart.html')
-
-
-def EcommerceView(request):
-    return render(request, 'ecommerce.html')
-
-
-def ProductPageView(request):
-    return render(request, 'product-page.html')
-
-
-def ProfilePageView(request):
-    return render(request, 'profile-page.html')
-
-
-def SignupView(request):
-    return render(request, 'signup-page.html')
+class SignupView(TemplateView):
+    template_name = "signup-page.html"

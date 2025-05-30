@@ -23,21 +23,7 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.IndexView, name="index"),
-    path('register/', views.ResgitrarView, name="Register"),
-    path('headers/', views.HeadersView, name="headers"),
-    path('about-us/', views.AboutUsView, name="about-us"),
-    path('blog/', views.BlogView, name="blog"),
-    path('blog-post/', views.BlogPostView, name="post"),
-    path('contac-us/', views.ContacUsview, name="contac-us"),
-    path('landing-page/', views.Landingview, name="landing-page"),
-    path('login/', views.LoginView, name="login"),
-    path('pricing/', views.PricingView, name="pricing"),
-    path('shopping-cart/', views.ShoppingCartView, name="shopping-cart"),
-    path('ecommerce/', views.EcommerceView, name="ecommerce"),
-    path('product-page/', views.ProductPageView, name="product-page"),
-    path('profile/', views.ProfilePageView, name="profile"),
-    path('signup/', views.SignupView, name="signup"),
+    path("", include("core.urls", namespace="core")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
